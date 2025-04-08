@@ -87,3 +87,89 @@
     - `RemoteWork` (object): Indicates whether the employee works remotely (Yes/No).
     - `Salary` (float64): Calculated annual salary for the employee.
     - `SalaryLevel` (category): Employee's salary level category.
+
+
+##  **👨‍💻Methodology:**
+
+1. **Data Cleaning**: 
+    - **Nulls**
+        - There are many columns with a condierable amount of nulls. 
+            - The column `businesstravel` all the nulls of this column can be changed by `no-travel`
+            - The column `department` has many nulls that can be easily filled by comparing the data with `jobrole`. The nulls that can't be guessed will be marked as "Unknown"
+            - The column `educationfield` has many nulls, but at the moment these data doesn't show any relevance. It will be left as it is.
+            - The column `hourlyrate`has many nulls, but can be related to `monthlyrate`
+            - The column `maritalstatus`has many nulls, but it isn't critical data. It will be left as it is. 
+            - The column `monthlyincome`can complement the `salary` column.
+            - The column `over18`doesn't bring relevant data, it will be dropped.
+            - The column `overtime` can be filled with No in the Nan gaps.
+            - The column `performancerating` has many nulls, but it isn't critical data. It will be left as it is.
+            - The column `standardhours` has many nulls, but it isn't critical data. It will be left as it is.
+            - The column `totalworkingyears` can be compared to `yearsatcompany`
+            - The column `worklifebalance` has many nulls, but it isn't critical data. It will be left as it is.
+            - The column `yearsincurrentrole` can be compared to `yearssincelastpromotion`
+            - The column `sameasmonthlyincome` will be dropped.            - 
+            - The column `numberofchildren` has 100% nulls, this column will be dropped. 
+            - The column `roledeparment` has merged/repeated data. This column will be processed and dropped
+            - 
+
+    - **Duplicates**
+        - There are 64 rows duplicated. After analyzing it, the duplicated data will be dropped. 
+
+    - **Change of dtype**: 
+        - The columns `monthlyincome`, `monthlyrate`, `salary`, `worklifebalance`, `totalworkingyears` and `performancerating` have to be changed to numeric dtype
+    
+    - **Homogenize data**:
+        - The column `gender` needs to change its values for "Male" and "Female"
+        - The column `maritalstatus`needs to change its values to match "Married", "Divorced"
+        - The column `businesstravel` needs to change its Nan for "non-travel"
+        - The column `overtime` needs to change its Nan for "non-travel"
+        - The columns `dailyrate`,  `hourlyrate` need to round to 2 decimals
+        - The column `education`needs to change it values per 1: "High School or Below", 2: "Professional Certification", 3: "Bachelor", 4: "Masters", 5: "Doctor"
+        - The column `distancefromhome` needs to convert all its values to absolute values to avoid potential negative distances.
+        - The column `remotework` needs to standardize its values to "Yes" and "No" using a mapping dictionary to ensure consistency across different formats
+
+2. **Exploration**: 
+
+    - Personal profile of the employees: 
+
+        - More presence of male workers (60%) than female, almost half of them around middle age (30-40y o), around 27% are married.
+    
+    - Educational profile:
+        - The majority of the employees (around 40%) hold a Bachelor degree, with men consistently outnumbering women across all education levels shown.
+        - Life Sciences and Medical exhibit the highest percentages of education fields, particularly for Bachelor's and Master's degrees.
+
+    - Professional profile of the employee: 
+
+        - Male pressence is higher in all departments
+        - Doctors have the highest average salary
+        - Research scientist, Sales executive and Laboratory tech. are the roles with the lowest pay.
+        - Even though there’s parity in almost al job roles, in some high-profile jobs male professionals aearn more than their female counterparts
+
+    - Departed vs currnt employee professional profiles
+
+        - The company has a 16% of attrition
+        - The gender difference seems consistent between those staying and those leaving.
+        - The jobs with more rotation are Laboratory Technician, Sales representative and Research Scientist. Those with fewer are Research Director and Manager
+        - The high profile jobs are the ones with more retention, and Sales representative, the job with the worst pay, the job with more rotation and less expectaton of staying.
+
+    - Satisfaction parameters 
+        - Average satisfaction is not very high (2/4)
+        - When crossing different common parameters in job satisfaction such as salary, overtime, commuting, and job position we can conclude that there is no clear indicator that these parameters affect satisfaction.
+        - The satisfaction average varies during the years
+        - The lack of promotion generates attrition.
+        - The overall performance is low the first years, then starts to vary and, in the case of the employees that leave the company, after 15+ years, drop at minimums. 
+        - The work balance also varies significantly during the time of the employees, showing that it must be one of the main reasons to attrite.
+        - Although job satisfaction is constant, performance is dropping for departing workers.
+
+3. **Insights**: 
+    - The profiles that remain with the company the longest are those in the highest ranks and earn the best salaries.
+    - The profiles with the highest turnover and the highest probability of attrition are those with lower rank, lower educational level and lower salary.
+    - Although the company is moving towards parity, there is still a gender pay gap in the same job positions. There is also a noticeably lower presence of women than men.
+    - The usual parameters of satisfaction do not prove to be relevant in this case. However, there is a high turnover in the sectors of employees who do not progress in their positions.
+
+4. **Next Steps**: 
+  - Identify specific areas for improvement: Review the results of the analysis to detect patterns or areas where employees express dissatisfaction, such as working conditions, internal communication or professional development.
+  - Better understand the role of managers by department and attempt to correlate job satisfaction and time worked with the same manager.
+  - To plot a correlation between satisfaction parameters specific to women
+  - Evaluate the performance of senior managers and relate it to their contribution to the company.
+  

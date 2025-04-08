@@ -16,7 +16,18 @@ The company has provided us with a csv (`hr_raw_data.csv`) containing all the in
     git clone https://github.com/dianapgomez/project-da-promo-47-modulo-3-dianapgomez.git
     ````
 
-  
+* Create a virtual environment (recommended):
+
+    ````bash
+    python -m venv venv
+    source venv/bin/activate 
+    # or venv\Scripts\activate on Windows
+    
+* Install dependencies:
+
+    ````bash
+    pip install -r requirements.txt
+    ````
 
 ### **🛠 Technologies Used**
 
