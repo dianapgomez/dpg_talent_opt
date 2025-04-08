@@ -1,0 +1,89 @@
+ # 📊 CSV Documentation
+
+
+ ## 📂 Data Sources
+- **Source:** hr_raw_data.csv
+- **Format:** CSV 
+- **Size:** 1678 rows × 41 columns
+- **Key Variables:**
+
+    - `Age` (object): Employee's age.
+    - `Attrition` (object): Indicates whether the employee left the company (Yes/No).
+    - `BusinessTravel` (object): Frequency of business trips (e.g., travel_rarely).
+    - `DailyRate` (float64): Estimated daily rate for clients, calculated based on the salary.
+    - `Department` (object): The department in which the employee works.
+    - `DistanceFromHome` (int64): Distance in miles or kilometers from home to work.
+    - `Education` (int64): Employee's education level on a numerical scale.
+    - `EducationField` (object): Employee's academic field of study.
+    - `employeecount` (int64): Constant value of "1", indicating a single employee per record.
+    - `employeenumber` (int64): Employee identification number.
+    - `EnvironmentSatisfaction` (int64): Level of satisfaction with the work environment.
+    - `Gender` (int64): Employee's gender.
+    - `HourlyRate` (float64): Calculated hourly rate.
+    - `JobInvolvement` (int64): Employee's level of commitment to the job.
+    - `JobLevel` (int64): Job hierarchy level of the employee's position.
+    - `JobRole` (object): Specific role or function of the employee.
+    - `JobSatisfaction` (int64): Overall satisfaction in the role.
+    - `MaritalStatus` (object): Marital status (e.g., Single, Married).
+    - `MonthlyIncome` (object): Estimated monthly income based on the annual salary.
+    - `MonthlyRate` (object): Estimated monthly rate based on the daily rate.
+    - `NUMCOMPANIESWORKED` (int64): Number of previous companies the employee has worked for.
+    - `OverTime` (object): Indicates whether the employee works overtime (Yes/No).
+    - `PercentSalaryHike` (int64): Percentage increase in salary.
+    - `PerformanceRating` (object): Performance evaluation on a numerical scale.
+    - `RelationshipSatisfaction` (int64): Satisfaction with interpersonal relationships at work.
+    - `StandardHours` (object): Classification of work hours (Full Time/Part Time).
+    - `StockOptionLevel` (int64): Level of stock options assigned.
+    - `TOTALWORKINGYEARS` (object): Total years of work experience.
+    - `TrainingTimesLastYear` (int64): Number of training sessions in the last year.
+    - `WORKLIFEBALANCE` (object): Level of work-life balance.
+    - `YearsAtCompany` (int64): Years at the current company.
+    - `YearsInCurrentRole` (object): Years in the current role.
+    - `YearsSinceLastPromotion` (int64): Years since the last promotion.
+    - `YEARSWITHCURRMANAGER` (int64): Years working with the current manager.
+    - `DateBirth` (int64): Employee's year of birth.
+    - `Salary` (object): Calculated annual salary for the employee.
+    - `RoleDepartament` (object): Combination of role and department.
+    - `NUMBERCHILDREN` (float64): Number of children the employee has (if available).
+    - `RemoteWork` (object): Indicates whether the employee works remotely (Yes/No).
+
+------------------------------
+- **Source:** hr_clean_data.csv
+- **Format:** CSV 
+- **Size:** 1614 rows × 35 columns
+- **Key Variables:**
+    - `Attrition` (object): Indicates whether the employee left the company (Yes/No).
+    - `BusinessTravel` (object): Frequency of business trips (e.g., travel_rarely).
+    - `DailyRate` (float64): Estimated daily rate for clients, calculated based on the salary.
+    - `Department` (object): The department in which the employee works.
+    - `DistanceFromHome` (int64): Distance in miles or kilometers from home to work.
+    - `Education` (object): Employee's education level on a numerical scale.
+    - `EducationField` (object): Employee's academic field of study.
+    - `EmployeeNumber` (int64): Employee identification number.
+    - `EnvironmentSatisfaction` (int64): Level of satisfaction with the work environment.
+    - `Gender` (object): Employee's gender.
+    - `HourlyRate` (float64): Calculated hourly rate.
+    - `JobInvolvement` (int64): Employee's level of commitment to the job.
+    - `JobLevel` (int64): Job hierarchy level of the employee's position.
+    - `JobRole` (object): Specific role or function of the employee.
+    - `JobSatisfaction` (int64): Overall satisfaction in the role.
+    - `MaritalStatus` (object): Marital status (e.g., Single, Married).
+    - `MonthlyRate` (float64): Estimated monthly rate based on the daily rate.
+    - `NUMCOMPANIESWORKED` (int64): Number of previous companies the employee has worked for.
+    - `OverTime` (object): Indicates whether the employee works overtime (Yes/No).
+    - `PercentSalaryHike` (int64): Percentage increase in salary.
+    - `PerformanceRating` (float64): Performance evaluation on a numerical scale.
+    - `RelationshipSatisfaction` (int64): Satisfaction with interpersonal relationships at work.
+    - `StandardHours` (object): Classification of work hours (Full Time/Part Time).
+    - `StockOptionLevel` (int64): Level of stock options assigned.
+    - `TOTALWORKINGYEARS` (float64): Total years of work experience.
+    - `TrainingTimesLastYear` (int64): Number of training sessions in the last year.
+    - `WORKLIFEBALANCE` (float64): Level of work-life balance.
+    - `YearsAtCompany` (int64): Years at the current company.
+    - `YearsInCurrentRole` (object): Years in the current role.
+    - `YearsSinceLastPromotion` (int64): Years since the last promotion.
+    - `YEARSWITHCURRMANAGER` (int64): Years working with the current manager.
+    - `DateBirth` (int64): Employee's year of birth.
+    - `RemoteWork` (object): Indicates whether the employee works remotely (Yes/No).
+    - `Salary` (float64): Calculated annual salary for the employee.
+    - `SalaryLevel` (category): Employee's salary level category.
