@@ -13,7 +13,7 @@ The company has provided us with a csv (`hr_raw_data.csv`) containing all the in
 * Clone the repository:
 
     ````bash
-    git clone https://github.com/dianapgomez/project-da-promo-47-modulo-3-dianapgomez.git
+    git clone https://github.com/dianapgomez/dpg_talent_opt.git
     ````
 
 * Create a virtual environment (recommended):
